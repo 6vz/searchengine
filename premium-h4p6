@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+   <meta property="og:site_name" content="wyszukiwarka.6vz.pl | by 6vz.dev#0001"> <!-- 1 -->
+	<meta property="og:title" content="6vz.searchengine"> <!-- Tutaj nazwa -->
+	<meta property="og:image" content="https://img.icons8.com/fluent/144/000000/search.png <!-- Logo Serwera -->
+	<meta property="og:description" content="6vz.searchengine, to jedyna taka przeglądarka która nie zbiera informacji, jak i o tobie, ani o twoich danych (ciasteczkach)"> <!-- To dla premium, jeżeli  -->
+	<meta name="theme-color" content="#7289da"> <!-- Kolorek embeda -->
+   <style>
+      .button {
+        display: inline-block;
+        border-radius: 4px;
+        background-color: #f4511e;
+        border: none;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 28px;
+        padding: 20px;
+        width: 200px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+      }
+      
+      .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+      
+      .button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+      }
+      
+      .button:hover span {
+        padding-right: 25px;
+      }
+      
+      .button:hover span:after {
+        opacity: 1;
+        right: 0;
+      }
+      </style>
+<script>
+        function startTime() {
+          var today = new Date();
+          var h = today.getHours();
+          var m = today.getMinutes();
+          var s = today.getSeconds();
+          m = checkTime(m);
+          s = checkTime(s);
+          document.getElementById('txt').innerHTML =
+          "Jest godzina " + h + ":" + m + ":" + s;
+          var t = setTimeout(startTime, 500);
+        }
+        function checkTime(i) {
+          if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+          return i;
+        }
+        </script>
+  <meta charset="UTF-8">
+  <title>6vz search engine</title>
+  <link href='https://fonts.googleapis.com/css?family=Comfortaa:400,300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="assets/google.css">
+<link rel="stylesheet" href="assets/card.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+<body onload="startTime()">
+<!-- partial:index.partial.html -->
+<!--cover w/ skrollr values (for example data-100 for styles at 100 pixels scroled)-->
+<div class="logocon" data-0="opacity: 1; display: flex" data-99="opacity: 0; display: none" data-100="display: none">
+  <div class="logo">witaj artur 👋</div>
+</div>
+<div class="hint" data-0="bottom: 10vh" data-100="bottom: -25px">Zejdź niżej aby rozpocząć przygode</div>
+<!--page contents below-->
+<div class="menu"><br><br>
+  <center>
+     <br><br><br><br>
+    <h1>cześć! jak dzień mija? ☀️</h1>
+    <div id="txt"></div>
+<br>
+    <div>
+      <form method="get" action="http://www.google.com/search">
+         
+         <div bar='bar'>
+         <table border="0" align="center" cellpadding="0">
+         <tr><td>
+         <input type="text"   name="q" size="25"
+         maxlength="255" value="" class="pasekwyszukiwania" /><br>
+         <center><p></p><input type="submit" value="Zacznij nurkować w internecie!" class="button"/></td></tr></center>
+         <tr><td align="center" style="font-size:75%">
+         </td></tr></table>
+         </div></form></div>
+         
+   </form>
+    <p class='subtitle'>wpisz swoją fraze wyszukiwania ⬆️</p>
+    <br><br><br><br>
+      <p class='copyright'>&copy; 6vz.dev#0001 - Wszelkie prawa zastrzeżone // Typ Licencji: PREMIUM // Numer Licencji: 2020/H4P6/0002 // ZAKAZ UDOSTĘPNIANIA WERSJI PREMIUM BEZ ZGODY<br>6vzsearchengine nie zbiera żadnych informacji o użytkownikach<br>Wyszukiwanie obsługuje firma GOOGLE LLC, Zobacz polityke prywatności Googl'a na stronie <a href='https://policies.google.com/?hl=pl'>policies.google.com</a></p>
+      <a href="//www.dmca.com/Protection/Status.aspx?ID=94f0c5c3-ed91-4c71-9367-38057d0bcdd2" title="DMCA.com Protection Status" class="dmca-badge"> <img src ="https://images.dmca.com/Badges/dmca_protected_sml_120e.png?ID=94f0c5c3-ed91-4c71-9367-38057d0bcdd2"  alt="DMCA.com Protection Status" /></a>  <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
+
+  </center>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.26/skrollr.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
